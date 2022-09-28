@@ -1,0 +1,34 @@
+{% extends 'Quiz/dependencies.html' %}
+ 
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 20px 20px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+</style>
+
+<div class="container ">
+	{% load static %}
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+        <div class="card" align="centre " style="width: 32rem; border:5px black solid">
+		<img class="card-img-top" src="{% static img %}" >
+            <div class="card-body">
+                <h5 class="card-title">{{warn}}</h5>
+		<h5 class="card-title">{{res}}</h5>
+	</div>
+	<form action="http://203.145.218.111:8000/price/">
+    	<button class="btn"><i class="fa fa-home"></i>加入全人家族</button>
+	</form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

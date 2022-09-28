@@ -1,0 +1,25 @@
+{% extends 'Quiz/dependencies.html' %}
+{% block content %}
+<div class="cover-container d-flex  w-50 h-100 p-3 mx-auto flex-column">
+<form method='post' action=''>
+{% csrf_token %}
+{% load static %}
+<img id="pic" src="{% static image %}" onclick="reloadimg()"  width="300" height="300" />
+<script>
+    function reloadimg(){
+        var src = "{% static image  %}";
+        imageObject = document.getElementById("pic");
+        imageObject.style.display = 'inline-block';
+        imageObject.src = src;
+    }
+</script>
+{{name}}
+<button type="submit" class="btn btn-primary" name='create'>製作</button>
+<br>
+<form action="send" method="post">
+{{send}}
+<button type="submit" name='sent'>傳送</button>
+{{mes}}
+</br>
+</div>
+{% endblock %}

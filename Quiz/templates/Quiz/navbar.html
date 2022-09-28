@@ -1,0 +1,47 @@
+{% load static %}
+ 
+<style>
+  .greet{
+    font-size: 18px;
+    color: #A2B59F;
+    margin-right: 20px;
+  }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #917B56;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+ 
+    <ul class="navbar-nav">
+	<li class="nav-item active">
+		<a class="nav-link" href="{% url 'home' %}">中心簡介</a>
+	</li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'question' %}">問卷</a>
+      </li>
+      </li>
+      <li class="nav-item active">
+      </li>
+      <li class="nav-item">
+	    <a class="nav-link" href="{% url 'avatar' %}">建立線上自我</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="{% url 'price' %}">會員收費</a>
+      </li>
+      <li class="nav-item">
+            <a class="nav-link" href="{% url 'upload_hs' %}">上傳心律與睡眠品質</a>
+      </li>
+	<li class="nav-item active">
+	</li>
+	<li class="nav-item">
+	    <a class="nav-link" href="{% url 'login' %}">登入</a>
+	</li>
+      </ul>
+  </div>
+ 
+  <span class="greet">歡迎光臨 {{request.user}}</span>
+  <span ><a  class="greet" href="{% url 'logout' %}">Logout</a></span>
+ 
+</nav>

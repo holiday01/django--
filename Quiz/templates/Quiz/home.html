@@ -1,0 +1,46 @@
+{% extends 'Quiz/dependencies.html' %}
+{% block content %}
+{% csrf_token %}
+{% load static %}
+<style>
+        img{
+                max-width: 60%;
+                max-height: 60%;
+        }
+        h1{
+            display: inline-block;
+            vertical-align: top;
+        }
+        .text{
+            display: inline-block;
+            vertical-align: top;
+            display: inline-block;
+            max-width: 80%;
+            padding-left: 20px;
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+
+<html>
+    <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+    <div class='text'>
+	    <h1>全人興起發光中心 簡介</h1>
+	<p>
+	<br>
+	「全人興起發光中心」是由一群熱情且具有使命感的年輕人經營。中心成立宗旨係-「協助現代上班族能卸下重擔，將困境轉為祝福，使參與被服務的成員更加快樂與全人健康、興盛」。
+	</br>
+	<br>
+中心所推出的產品服務，結合數位分析平台及教練系統 (The Integrated RAS Platform with Coach System )，透過智慧化分析您的身心靈狀態並推估您的興起發光指數及解決方案，以及結合專業師資導您後續的成長之旅。謝謝您開始使用我們所推出的服務，期待您能再次興起發光！！
+</br>
+<image class="img" id="pic" src="{% static '50356.jpg' %}"></image>
+<image class="img" id="pic" src="{% static 'QR_home.jpg' %}"></image>
+	</p>
+    </div>
+    </body>
+</html>
+{% endblock %}
